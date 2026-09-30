@@ -1,0 +1,126 @@
+# ====================================================================
+# .NET 10 / ASP.NET Core / C#
+# ====================================================================
+
+# Build results
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+**/[Ll]ogs/
+**/publish/
+
+# Visual Studio / VS Code / Rider cache & user settings
+**/.vs/
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+**/*.suo
+**/*.userprefs
+**/*.resharper.user
+**/*.DotSettings.user
+.idea/
+*.dotCover
+
+# Test and Code Coverage results
+**/TestResults/
+**/[Cc]overage/
+*.trx
+*.coverage
+*.coveragexml
+
+# ASP.NET / Local App Configuration & Secrets
+**/appsettings.*.local.json
+**/appsettings.Local.json
+**/api.http.user
+**/[Aa]pp_Data/
+secrets.json
+
+# Local Databases (SQLite / SQL Server Express / LocalDB)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+# NuGet packages & intermediate artifacts
+**/packages/
+!**/packages/build/
+*.nupkg
+*.snupkg
+**/project.lock.json
+**/project.assets.json
+
+# ====================================================================
+# React / Node / Vite
+# ====================================================================
+
+# Dependencies
+**/node_modules/
+
+# Production & Build outputs
+**/dist/
+**/dist-ssr/
+**/build/
+**/out/
+
+# Environment variable files (keep examples tracked)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+!.env.example
+
+# NPM / Yarn / PNPM debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Yarn Modern (v2+)
+**/.yarn/cache/
+**/.yarn/unplugged/
+**/.yarn/build-state.yml
+**/.yarn/install-state.gz
+**/.pnp.*
+# Keep .yarn/releases and .yarn/plugins tracked
+!**/.yarn/releases/
+!**/.yarn/plugins/
+
+# Editor / Linter caches
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+.vite/
+
+# ====================================================================
+# General IDE & Operating System Files
+# ====================================================================
+
+# VS Code (preserve shared configuration if any)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Temporary / swap files
+*.sw?
+*~
+*.bak
+*.tmp
