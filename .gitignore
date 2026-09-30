@@ -82,14 +82,14 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Yarn Modern (v2+)
-.yarn/cache/
-.yarn/unplugged/
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+**/.yarn/cache/
+**/.yarn/unplugged/
+**/.yarn/build-state.yml
+**/.yarn/install-state.gz
+**/.pnp.*
 # Keep .yarn/releases and .yarn/plugins tracked
-!.yarn/releases/
-!.yarn/plugins/
+!**/.yarn/releases/
+!**/.yarn/plugins/
 
 # Editor / Linter caches
 .eslintcache

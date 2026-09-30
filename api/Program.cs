@@ -7,7 +7,19 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        const string DevCorsPolicy = "DevCorsPolicy";
+
         // Add services to the container.
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(DevCorsPolicy, policy =>
+            {
+                policy.WithOrigins("http://localhost:3000", "https://localhost:3000")
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+            });
+        });
+
         builder.Services.AddAuthorization();
 
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -22,6 +34,8 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseCors(DevCorsPolicy);
 
         app.UseAuthorization();
 
