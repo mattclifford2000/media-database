@@ -1,6 +1,58 @@
 @api_HostAddress = http://localhost:5055
 
-GET {{api_HostAddress}}/weatherforecast/
+### Get all media items
+GET {{api_HostAddress}}/api/media
 Accept: application/json
 
-###
+### Search media items
+GET {{api_HostAddress}}/api/media?search=nolan
+Accept: application/json
+
+### Filter by media type (Movie, TVShow, Book, Album, Game)
+GET {{api_HostAddress}}/api/media?type=Movie
+Accept: application/json
+
+### Filter by status (Completed, In Progress, Plan to Watch)
+GET {{api_HostAddress}}/api/media?status=Completed
+Accept: application/json
+
+### Get media item by ID
+GET {{api_HostAddress}}/api/media/1
+Accept: application/json
+
+### Create a new media item
+POST {{api_HostAddress}}/api/media
+Content-Type: application/json
+
+{
+  "title": "Interstellar",
+  "type": "Movie",
+  "creator": "Christopher Nolan",
+  "releaseYear": 2014,
+  "genre": "Sci-Fi, Adventure, Drama",
+  "overview": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot is tasked to pilot a spacecraft along with a team of researchers to find a new planet for humans.",
+  "rating": 8.7,
+  "status": "Plan to Watch"
+}
+
+### Update an existing media item
+PUT {{api_HostAddress}}/api/media/1
+Content-Type: application/json
+
+{
+  "title": "Inception (Special Edition)",
+  "type": "Movie",
+  "creator": "Christopher Nolan",
+  "releaseYear": 2010,
+  "genre": "Sci-Fi, Action, Heist",
+  "overview": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+  "rating": 9.0,
+  "status": "Completed"
+}
+
+### Delete a media item
+DELETE {{api_HostAddress}}/api/media/1
+
+### Weather forecast (sample)
+GET {{api_HostAddress}}/weatherforecast/
+Accept: application/json
